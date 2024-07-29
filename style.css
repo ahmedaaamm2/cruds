@@ -3,17 +3,19 @@
     padding: 0;
 }
 body{
-    background-color: rgb(85, 13, 255);
+    background-color: rgb(199, 199, 199);
     color: white;
     font-family: system-ui;
 }
 input{
     width: 100%;
     height: 30px;
+    border-radius: 5px;
     outline: none;
     border: none;
     background-color: rgb(253, 236, 236);
-    margin: 4px 0;
+    margin: 4px 1px;
+    padding: 0px 7px;
 }
 .crud{
     width: 80%;
@@ -24,7 +26,36 @@ input{
     text-transform: uppercase;
     margin: 10px 0;
 }
-.price inputs{
-    width: 20%;
-
+input:focus{
+    background-color: rgb(207, 245, 189);
+    transform: scale(1.01);
+}    
+.price input{
+    width: 23%;
+    padding: 0px 10px;
+}
+#total{
+    padding: 4px 10px;
+    background-color: blueviolet;
+}
+button{
+    background-color: rgb(30, 30, 109);
+    width: 100%;
+    height: 30px;
+    border-radius: 5px;
+    padding: 4px 0;
+    outline: none;
+    border: none;
+    color: white;
+}
+button:hover{
+    /* transform: scale(1.02); */
+    /* background-color: rgb(29, 114, 47); */
+    letter-spacing: 2px;
+}
+.btnSearch{
+    display: flex;
+    gap: 10px;
+    width: 100%;
+    height: 30px;
 }
