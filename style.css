@@ -2,16 +2,19 @@
     margin: 0;
     padding: 0px;
     box-sizing: border-box;
+    /* font-size: medium; */
+    
 }
 body{
-    background-color: rgb(104, 104, 104);
+    /* background-color: rgb(104, 104, 104); */
+    background-color: rgb(196, 196, 196);
     color: white;
     font-family: system-ui;
     padding: 4px;
 }
 input{
     width: 100%;
-    height: 40px;
+    height: 50px;
     border-radius: 7px;
     outline: none;
     border: none;
@@ -21,7 +24,7 @@ input{
 }
 .crud{
     width: 80%;
-    padding: 20px 0;
+    padding: 8px 0;
     margin: auto;
 }  
 .head{
@@ -29,12 +32,12 @@ input{
     flex-direction: column;
     justify-content: center;
     height: 90px;
-    background-color: rgb(170, 117, 135);
+    background-color: rgb(65, 82, 160);
     text-align: center;
     text-transform: uppercase;
-    margin: 8px 0;
+    margin: 25px 0;
     border-radius: 15px;
-    font-weight: bold;
+    /* font-weight: bold; */
 }
   
 .inputs{
@@ -45,9 +48,11 @@ input{
 }    
 #total{
     background-color: brown;
-    padding: 10px 50px;
+    padding: 5px 20px;
     border-radius: 8px;
-    font-size: large;
+    /* font-size:medium; */
+    height: 50px;
+    text-align: center;
 }
 #total:hover{
     transform: scale(1.5);
@@ -55,32 +60,42 @@ input{
 .outputs{
     /* background-color: rgb(187, 209, 166); */
     padding: 10px 5px;
-    margin: 8px 0;
+    margin: 4px 0;
     border-radius: 15px;
 }
 
 input:focus{
-    background-color: rgb(207, 207, 207);
+    /* background-color: rgb(248, 220, 209); */
     transform: scale(1.01);
-}    
-.price input{
+    border: 2px solid rgb(49, 231, 12);
+}  
+.price{
+    display: flex;
+    /* justify-content: space-between; */
+    align-items: center;
+    gap: 10px;
+
+}  
+/* .price input{ */
     /* display: flex;
     flex-direction:inherit */
-    width: 19%;
-    /* padding: 0px 10px; */
-}
+    /* width: 20%; */
+    /* height: 30%; */
+     
+/* } */
 
 button{
     background-color: rgb(65, 82, 160);
     width: 100%;
-    height: 40px;
+    height: 50px;
     border-radius: 7px;
     padding: 4px 0;
     outline: none;
     border: none;
     color: white;
-    font-weight: bold;
-    font-size: large;
+    /* font-weight: bold; */
+    /* font-size: large; */
+    /* margin: 4px 0; */
 }
 button:hover, .btnSearch button:hover, #total:hover{
     transform: scale(1.02);
@@ -89,14 +104,16 @@ button:hover, .btnSearch button:hover, #total:hover{
 }
 .btnSearch{
     display: flex;
-    justify-content: space-between;
+    gap: 10px;
+    /* justify-content: space-between; */
     width: 100%;
     height: 30px;
-    margin: 8px 0;
+    margin: 4px 0;
 }
 .btnSearch button{
-    width: 45%;
+    /* width: 50%; */
+    /* gap: 10px; */
     background-color: rgb(65, 82, 160);
     color: rgb(255, 255, 255);
-    font-weight: bold;
+    /* font-weight: bold; */
 } 
