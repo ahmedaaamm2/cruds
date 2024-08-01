@@ -2,15 +2,16 @@
     margin: 0;
     padding: 0px;
     box-sizing: border-box;
-    /* font-size: medium; */
+    font-size: medium;
     
 }
 body{
-    /* background-color: rgb(104, 104, 104); */
-    background-color: rgb(196, 196, 196);
+    /* display: flex; */
+    background-color: rgb(214, 211, 211);
     color: white;
     font-family: system-ui;
-    padding: 4px;
+    /* margin: 4px 80px; */
+
 }
 input{
     width: 100%;
@@ -23,9 +24,14 @@ input{
     
 }
 .crud{
+    display: flex;
+    flex-direction: column;
+    background-color: green;
     width: 80%;
-    padding: 8px 0;
+    padding: 1em .5em;
+    gap: .5em;
     margin: auto;
+    
 }  
 .head{
     display: flex;
@@ -35,22 +41,21 @@ input{
     background-color: rgb(65, 82, 160);
     text-align: center;
     text-transform: uppercase;
-    margin: 25px 0;
+    /* margin: 25px 0; */
     border-radius: 15px;
-    /* font-weight: bold; */
+
 }
   
 .inputs{
     /* background-color: darkseagreen; */
     padding: 0 5px;
-    margin: 8px 0;
+    /* margin: 8px 0; */
     border-radius: 15;
 }    
 #total{
     background-color: brown;
     padding: 5px 20px;
     border-radius: 8px;
-    /* font-size:medium; */
     height: 50px;
     text-align: center;
 }
@@ -60,7 +65,7 @@ input{
 .outputs{
     /* background-color: rgb(187, 209, 166); */
     padding: 10px 5px;
-    margin: 4px 0;
+    /* margin: 4px 0; */
     border-radius: 15px;
 }
 
@@ -76,14 +81,6 @@ input:focus{
     gap: 10px;
 
 }  
-/* .price input{ */
-    /* display: flex;
-    flex-direction:inherit */
-    /* width: 20%; */
-    /* height: 30%; */
-     
-/* } */
-
 button{
     background-color: rgb(65, 82, 160);
     width: 100%;
@@ -93,9 +90,7 @@ button{
     outline: none;
     border: none;
     color: white;
-    /* font-weight: bold; */
-    /* font-size: large; */
-    /* margin: 4px 0; */
+
 }
 button:hover, .btnSearch button:hover, #total:hover{
     transform: scale(1.02);
@@ -108,7 +103,7 @@ button:hover, .btnSearch button:hover, #total:hover{
     /* justify-content: space-between; */
     width: 100%;
     height: 30px;
-    margin: 4px 0;
+    /* margin: 4px 0; */
 }
 .btnSearch button{
     /* width: 50%; */
