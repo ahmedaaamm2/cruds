@@ -62,6 +62,7 @@ submit.onclick = function(){
     console.log(newPro)
 
     clearData()
+    showData()
     
 }
 
@@ -100,8 +101,19 @@ function showData()
             </tr>
         
         `
-        document.getElementById('tbody').innerHTML = table;
     }
+
+    document.getElementById('tbody').innerHTML = table;
+
+    let btnDelete = document.getElementById('deleteAll');
+    if(dataPro.length > 0){
+        btnDelete.innerHTML = `
+            <button onclick="deleteAll()">Delete All</button>
+        `
+    }else{
+        btnDelete.innerHTML = '';
+    }
+
 }
 
 showData()
@@ -116,6 +128,12 @@ function deleteData(i){
 }
 
 // delet all
+
+function deleteAll(){
+    localStorage.clear()
+    dataPro.splice(0)
+    showData()
+}
 
 
 // update

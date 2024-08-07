@@ -62,7 +62,7 @@ input{
 }
 .outputs{
     /* background-color: rgb(187, 209, 166); */
-    padding: 10px 5px;
+    padding: 30px 5px;
     /* margin: 4px 0; */
     border-radius: 15px;
 }
@@ -109,6 +109,10 @@ button:hover, .btnSearch button:hover, #total:hover{
     background-color: rgb(65, 82, 160);
     color: rgb(255, 255, 255);
     /* font-weight: bold; */
+}
+#deleteAll{
+    margin: 20px 0;
+    background-color: blueviolet;
 }
 table{
     width: 100%;
