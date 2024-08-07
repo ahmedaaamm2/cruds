@@ -11,8 +11,16 @@ body{
     color: white;
     font-family: system-ui;
     /* margin: 4px 80px; */
-
 }
+.crud{
+    display: flex;
+    flex-direction: column;
+    background-color: rgb(2, 123, 2);
+    width: 80%;
+    padding: 1em .5em;
+    gap: .5em;
+    margin: auto;
+}  
 input{
     width: 100%;
     height: 50px;
@@ -23,16 +31,6 @@ input{
     padding: 0px 7px;
     
 }
-.crud{
-    display: flex;
-    flex-direction: column;
-    background-color: green;
-    width: 80%;
-    padding: 1em .5em;
-    gap: .5em;
-    margin: auto;
-    
-}  
 .head{
     display: flex;
     flex-direction: column;
