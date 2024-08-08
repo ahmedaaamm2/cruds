@@ -15,7 +15,7 @@ body{
 .crud{
     display: flex;
     flex-direction: column;
-    background-color: rgb(2, 123, 2);
+    background-color: rgb(140, 141, 140);
     width: 80%;
     padding: 1em .5em;
     gap: .5em;
@@ -52,10 +52,12 @@ input{
 }    
 #total{
     background-color: brown;
-    padding: 5px 20px;
+    padding: 0px 10px;
     border-radius: 8px;
-    height: 50px;
+    height: 45px;
+    width: 480px;
     text-align: center;
+    font-size:smaller;   
 }
 #total:hover{
     transform: scale(1.5);

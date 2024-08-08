@@ -25,13 +25,13 @@ function getTotal()
 {
     if(price.value != '' && taxes.value != '' && ads.value != ''){
         let result = (+price.value + +taxes.value + +ads.value) - +discount.value;
-        total.innerHTML = 'total ' + result;
-        total.style.background = '#040';
-        crud.style.backgroundColor= 'gray';
+        total.innerHTML = 'Total ' + result;
+        total.style.background = '#ed1f1f';
+        // crud.style.backgroundColor= 'gray';
     }else{
         total.innerHTML = '';
-        total.style.background = '#a00d02';
-        crud.style.backgroundColor= 'gray';       
+        total.style.background = '#4152a0';
+        // crud.style.backgroundColor= 'gray';       
     }
 }
 
@@ -57,7 +57,14 @@ submit.onclick = function(){
         count:count.value,
         category: category.value,
     }
-    dataPro.push(newPro)
+    if(newPro.count > 1){
+        for(let i = 0; i < newPro.count; i++){
+            dataPro.push(newPro);
+        }
+    }else{
+        dataPro.push(newPro);
+    }
+    
     localStorage.setItem('product', JSON.stringify(dataPro))
     console.log(newPro)
 
@@ -108,7 +115,7 @@ function showData()
     let btnDelete = document.getElementById('deleteAll');
     if(dataPro.length > 0){
         btnDelete.innerHTML = `
-            <button onclick="deleteAll()">Delete All</button>
+            <button onclick="deleteAll()">Delete All (${dataPro.length})</button>
         `
     }else{
         btnDelete.innerHTML = '';
