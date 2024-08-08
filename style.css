@@ -89,9 +89,9 @@ button{
 
 }
 button:hover, .btnSearch button:hover, #total:hover{
-    transform: scale(1.02);
+    transform: scale(1.01);
     background-color: rgb(119, 9, 46);
-    letter-spacing: 1px;
+    letter-spacing: .5px;
 }
 .btnSearch{
     display: flex;

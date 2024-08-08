@@ -115,7 +115,7 @@ function showData()
     let btnDelete = document.getElementById('deleteAll');
     if(dataPro.length > 0){
         btnDelete.innerHTML = `
-            <button onclick="deleteAll()">Delete All</button>
+            <button onclick="deleteAll()">Delete All (${dataPro.length})</button>
         `
     }else{
         btnDelete.innerHTML = '';
