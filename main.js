@@ -29,7 +29,7 @@ function getTotal()
         total.style.background = '#ed1f1f';
         // crud.style.backgroundColor= 'gray';
     }else{
-        total.innerHTML = '';
+        total.innerHTML = 'Total ';
         total.style.background = '#4152a0';
         // crud.style.backgroundColor= 'gray';       
     }

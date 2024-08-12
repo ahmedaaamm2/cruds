@@ -52,10 +52,10 @@ input{
 }    
 #total{
     background-color: brown;
-    padding: 0px 10px;
+    padding: 10px 10px;
     border-radius: 8px;
     height: 45px;
-    width: 480px;
+    width: 1200px;
     text-align: center;
     font-size:smaller;   
 }
@@ -92,6 +92,7 @@ button{
     outline: none;
     border: none;
     color: white;
+    margin: 3px 0 0 0;
 
 }
 button:hover, .btnSearch button:hover, #total:hover{
