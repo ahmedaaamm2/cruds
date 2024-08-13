@@ -27,11 +27,10 @@ function getTotal()
         let result = (+price.value + +taxes.value + +ads.value) - +discount.value;
         total.innerHTML = 'Total ' + result;
         total.style.background = '#ed1f1f';
-        // crud.style.backgroundColor= 'gray';
     }else{
         total.innerHTML = 'Total ';
-        total.style.background = '#4152a0';
-        // crud.style.backgroundColor= 'gray';       
+        total.style.background = '#a52a2a';
+    
     }
 }
 
