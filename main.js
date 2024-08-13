@@ -15,6 +15,9 @@ let submit = document.getElementById('submit');
 let crud = document.getElementsByClassName("crud")[0];
 
 
+let mood = 'creat';
+let tmp;
+
 // console.log(id,title,price,taxes,ads,discount,total,count,category,submit)
 
 
@@ -56,12 +59,21 @@ submit.onclick = function(){
         count:count.value,
         category: category.value,
     }
-    if(newPro.count > 1){
-        for(let i = 0; i < newPro.count; i++){
+
+    if(mood === 'create'){
+
+        if(newPro.count > 1){
+            for(let i = 0; i < newPro.count; i++){
+                dataPro.push(newPro);
+            }
+        }else{
             dataPro.push(newPro);
         }
     }else{
-        dataPro.push(newPro);
+        dataPro[tmp] = newPro;
+        mood = 'create';
+        count.style.display = 'block';
+        submit.innerHTML = 'Create';
     }
     
     localStorage.setItem('product', JSON.stringify(dataPro))
@@ -90,6 +102,7 @@ function clearData(){
 
 function showData()
 {
+    getTotal()
     let table = '';
     for(let i = 0; i < dataPro.length; i++){
         table += `
@@ -102,8 +115,8 @@ function showData()
                 <td>${dataPro[i].discount}</td>
                 <td>${dataPro[i].total}</td>
                 <td>${dataPro[i].category}</td>
-                <td><button id="update">update</button></td>
-                <td><button onclick="deleteData(${i})" id="delete">delete</button></td>
+                <td><button onclick="updateData(${i})" id="update">Update</button></td>
+                <td><button onclick="deleteData(${i})" id="delete">Delete</button></td>
             </tr>
         
         `
@@ -143,6 +156,27 @@ function deleteAll(){
 
 
 // update
+
+function updateData(i){
+    title.value = dataPro[i].title;
+    price.value = dataPro[i].price;
+    taxes.value = dataPro[i].taxes;
+    ads.value = dataPro[i].ads;
+    discount.value = dataPro[i].discount;
+    getTotal()
+    count.style.display = "none";
+    category.value = dataPro[i].category;
+    submit.innerHTML = 'Update';
+    submit.style.backgroundColor = 'green'; 
+    mood = 'update';
+    tmp = i;
+    scroll({
+        top: 0,
+        behavior: "smooth",
+    })
+}
+
+
 // search
 // clean data
 

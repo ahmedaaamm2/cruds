@@ -1,8 +1,10 @@
 :root{
     --body-background: green;
-    --crud-background: #76b5c5;
+    --main-background: #76b5c5;
     --button-color: #e28743;
-    --button-color-second: yellow:
+    --button-color-second: yellow;
+    --border-line: 2px solid #31e70c;
+    --hover-color: #216e0a ;
 
 }
 
@@ -28,7 +30,7 @@ body{
 .crud{
     display: flex;
     flex-direction: column;
-    background-color: var(--crud-background);
+    background-color: var(--main-background);
     width: 80%;
     padding: 1em .5em;
     gap: .5em;
@@ -87,7 +89,7 @@ input{
 input:focus{
     /* background-color: rgb(248, 220, 209); */
     transform: scale(1.01);
-    border: 2px solid rgb(49, 231, 12);
+    border: var(--border-line);
 }  
 .price{
     display: flex;
@@ -109,8 +111,8 @@ button{
 
 }
 button:hover, .btnSearch button:hover, #total:hover{
-    transform: scale(1.02);
-    background-color: rgb(97, 111, 238);
+    /* transform: scale(1.02); */
+    background-color: var(--hover-color);
     letter-spacing: 1px;
 }
 .btnSearch{
