@@ -1,6 +1,9 @@
 // test .js file linked or not
 // alert("ahmed")
 
+    /* all buttons = #e28743   this is for css  */
+    /* cruds background = #76b5c5     this is for css  */
+
 // call items 
 let id = document.getElementById('id');
 let title = document.getElementById('title');
@@ -59,21 +62,12 @@ submit.onclick = function(){
         count:count.value,
         category: category.value,
     }
-
-    if(mood === 'create'){
-
-        if(newPro.count > 1){
-            for(let i = 0; i < newPro.count; i++){
-                dataPro.push(newPro);
-            }
-        }else{
+    if(newPro.count > 1){
+        for(let i = 0; i < newPro.count; i++){
             dataPro.push(newPro);
         }
     }else{
-        dataPro[tmp] = newPro;
-        mood = 'create';
-        count.style.display = 'block';
-        submit.innerHTML = 'Create';
+        dataPro.push(newPro);
     }
     
     localStorage.setItem('product', JSON.stringify(dataPro))
@@ -102,7 +96,6 @@ function clearData(){
 
 function showData()
 {
-    getTotal()
     let table = '';
     for(let i = 0; i < dataPro.length; i++){
         table += `
@@ -115,8 +108,8 @@ function showData()
                 <td>${dataPro[i].discount}</td>
                 <td>${dataPro[i].total}</td>
                 <td>${dataPro[i].category}</td>
-                <td><button onclick="updateData(${i})" id="update">Update</button></td>
-                <td><button onclick="deleteData(${i})" id="delete">Delete</button></td>
+                <td><button id="update">update</button></td>
+                <td><button onclick="deleteData(${i})" id="delete">delete</button></td>
             </tr>
         
         `
