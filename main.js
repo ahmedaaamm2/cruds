@@ -17,8 +17,9 @@ let category = document.getElementById('category');
 let submit = document.getElementById('submit');
 let crud = document.getElementsByClassName("crud")[0];
 
+let root = document.querySelector(':root');
 
-let mood = 'creat';
+let mood = 'create';
 let tmp;
 
 // console.log(id,title,price,taxes,ads,discount,total,count,category,submit)
@@ -62,13 +63,24 @@ submit.onclick = function(){
         count:count.value,
         category: category.value,
     }
-    if(newPro.count > 1){
-        for(let i = 0; i < newPro.count; i++){
+
+    if(mood === 'create'){
+        if(newPro.count > 1){
+            for(let i = 0; i < newPro.count; i++){
+                dataPro.push(newPro);
+            }
+        }else{
             dataPro.push(newPro);
         }
+
     }else{
-        dataPro.push(newPro);
+        dataPro[tmp] = newPro;
+        mood = 'create';
+        submit.innerHTML = 'create';
+        count.style.display = 'block';
+        total.style.backgroundColor = getComputedStyle(root).getPropertyValue('--button-color-2'); 
     }
+
     
     localStorage.setItem('product', JSON.stringify(dataPro))
     console.log(newPro)
@@ -87,7 +99,7 @@ function clearData(){
     taxes.value = '';
     ads.value = '';
     discount.value = '';
-    total.innerHTML = '';
+    total.innerHTML = 'Total';
     count.value = '';
     category.value = '';
 }
@@ -108,7 +120,7 @@ function showData()
                 <td>${dataPro[i].discount}</td>
                 <td>${dataPro[i].total}</td>
                 <td>${dataPro[i].category}</td>
-                <td><button id="update">update</button></td>
+                <td><button onclick= "updateData(${i})" id="update">update</button></td>
                 <td><button onclick="deleteData(${i})" id="delete">delete</button></td>
             </tr>
         

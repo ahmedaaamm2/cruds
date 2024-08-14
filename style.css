@@ -127,14 +127,24 @@ table{
     color: #000000;
     /* font: bold; */
 } 
-table th{
+table{
+    border-spacing: 10px;
+}
+
+th{
     text-transform: uppercase;
+    border-radius: 15px;
+    /* padding: 30px; */
+
 }
 td{
-    padding: 5px;
-    background-color: #cfb4b4;
+    padding: 2px;
+    background-color: #40911b;
     border-radius: 15px;
     border-spacing: 30px;
+    color: rgb(255, 255, 255);
+    font: bold;
+    height: 10px;
 }
 .tableHead{
     background-color: #bb6161;
