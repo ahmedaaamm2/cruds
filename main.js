@@ -54,14 +54,14 @@ if(localStorage.product != null){
 
 submit.onclick = function(){
     let newPro = {
-        title:title.value,
+        title:title.value.toLowerCase(),
         price:price.value,
         taxes:taxes.value,
         ads:ads.value,
         discount:discount.value,
         total:total.innerHTML,
         count:count.value,
-        category: category.value,
+        category: category.value.toLowerCase(),
     }
 
     if(mood === 'create'){
@@ -108,8 +108,10 @@ function clearData(){
 
 function showData()
 {
+    
     let table = '';
     for(let i = 0; i < dataPro.length; i++){
+        
         table += `
             <tr>
                 <td>${i}</td>
@@ -119,13 +121,26 @@ function showData()
                 <td>${dataPro[i].ads}</td>
                 <td>${dataPro[i].discount}</td>
                 <td>${dataPro[i].total}</td>
-                <td>${dataPro[i].category}</td>
+                <td id="myTd" class="ww">${dataPro[i].category}</td>
                 <td><button onclick= "updateData(${i})" id="update">update</button></td>
                 <td><button onclick="deleteData(${i})" id="delete">delete</button></td>
             </tr>
         
         `
+
+        // ssss = document.getElementById("table").rows[i].cells[7];
+        if(dataPro[i].category === 'A'){
+            console.log('Ahmed')
+
+            // ssss.style.backgroundColor = 'red';
+        // hhh = document.getElementsByClassName("ttttt")
+        // hhh.style.backgroundColor = 'red';
+        }
+
+
     }
+
+
 
     document.getElementById('tbody').innerHTML = table;
 
@@ -141,7 +156,6 @@ function showData()
 }
 
 showData()
-
 // count
 // delete
 
@@ -183,5 +197,76 @@ function updateData(i){
 
 
 // search
+let searchMood = 'title';
+
+function getSearchMood(id){
+    let search = document.getElementById('search');
+    if(id == 'searchTitl'){
+        searchMood = 'title';
+           
+    }else{
+        searchMood = 'category';
+    }
+    search.focus()
+    search.placeholder = 'Search By ' + searchMood;
+    console.log(searchMood)
+    search.value = '';
+    showData();
+
+}
+
+
+
+function searchData(value){
+    let table = '';
+    for(let i = 0; i < dataPro.length; i++){
+        if(searchMood == 'title')
+            if(dataPro[i].title.includes(value.toLowerCase())){
+                table += `
+                <tr>
+                    <td>${i}</td>
+                    <td>${dataPro[i].title}</td>
+                    <td>${dataPro[i].price}</td>
+                    <td>${dataPro[i].taxes}</td>
+                    <td>${dataPro[i].ads}</td>
+                    <td>${dataPro[i].discount}</td>
+                    <td>${dataPro[i].total}</td>
+                    <td id="myTd" class="ww">${dataPro[i].category}</td>
+                    <td><button onclick= "updateData(${i})" id="update">update</button></td>
+                    <td><button onclick="deleteData(${i})" id="delete">delete</button></td>
+                </tr>
+            
+                        `}
+        else{
+            if(dataPro[i].category.includes(value.toLowerCase())){
+                table += `
+                <tr>
+                    <td>${i}</td>
+                    <td>${dataPro[i].title}</td>
+                    <td>${dataPro[i].price}</td>
+                    <td>${dataPro[i].taxes}</td>
+                    <td>${dataPro[i].ads}</td>
+                    <td>${dataPro[i].discount}</td>
+                    <td>${dataPro[i].total}</td>
+                    <td id="myTd" class="ww">${dataPro[i].category}</td>
+                    <td><button onclick= "updateData(${i})" id="update">update</button></td>
+                    <td><button onclick="deleteData(${i})" id="delete">delete</button></td>
+                </tr> `}
+            
+            }            
+    
+        }                 
+
+
+    document.getElementById('tbody').innerHTML = table;
+}   
+    
+      
+        
+
+        
+      
+
+
 // clean data
 
