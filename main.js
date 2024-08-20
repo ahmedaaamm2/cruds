@@ -196,31 +196,33 @@ function updateData(i){
 }
 
 
+
 // search
 let searchMood = 'title';
 
-function getSearchMood(id){
+function getSearchMood(id)
+{
+    console.log(id);
     let search = document.getElementById('search');
-    if(id == 'searchTitl'){
+    if(id == 'searchTitle'){
         searchMood = 'title';
            
     }else{
         searchMood = 'category';
     }
-    search.focus()
-    search.placeholder = 'Search By ' + searchMood;
-    console.log(searchMood)
-    search.value = '';
-    showData();
+search.focus()
+search.placeholder = 'Search By ' + searchMood;
+search.value = '';
+showData();
 
 }
 
 
-
-function searchData(value){
+function searchData(value)
+{
     let table = '';
-    for(let i = 0; i < dataPro.length; i++){
-        if(searchMood == 'title')
+    for(let i = 0; i < dataPro.length; i++){    
+        if(searchMood == 'title'){
             if(dataPro[i].title.includes(value.toLowerCase())){
                 table += `
                 <tr>
@@ -235,9 +237,9 @@ function searchData(value){
                     <td><button onclick= "updateData(${i})" id="update">update</button></td>
                     <td><button onclick="deleteData(${i})" id="delete">delete</button></td>
                 </tr>
-            
-                        `}
-        else{
+                        `;
+            }        
+        }else{
             if(dataPro[i].category.includes(value.toLowerCase())){
                 table += `
                 <tr>
@@ -251,13 +253,12 @@ function searchData(value){
                     <td id="myTd" class="ww">${dataPro[i].category}</td>
                     <td><button onclick= "updateData(${i})" id="update">update</button></td>
                     <td><button onclick="deleteData(${i})" id="delete">delete</button></td>
-                </tr> `}
-            
-            }            
-    
-        }                 
-
-
+                </tr>
+                        `;
+            } 
+        }        
+    }
+ 
     document.getElementById('tbody').innerHTML = table;
 }   
     
