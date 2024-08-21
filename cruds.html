@@ -15,7 +15,7 @@
         </div>
 
 
-        <div class="inputs">
+        <div class="inputs-div">
             <input placeholder="title" type="text" id="title">
             <div class="price">
                 <input onkeyup="getTotal()" type="number" id="price" placeholder="price">
@@ -34,32 +34,34 @@
 
         <div class="outputs">
             <div class="searchblock">
-                <input type="text" id="search" placeholder="search">
+                <input onkeyup="searchData(this.value)" type="text" id="search" placeholder="search">
                 <div class="btnSearch">
-                    <button id="searchTitl">Search by Title</button>
-                    <button id="searchTCategory">Search By Category</button>
+                    <button onclick="getSearchMood(this.id)" id="searchTitle">Search by Title</button>
+                    <button onclick="getSearchMood(this.id)" id="searchTCategory">Search By Category</button>
                 </div>
             </div>
             <div id="deleteAll">
                 
             </div>
-            <table>
-                <tr>
-                    <th>id</th>
-                    <th>title</th>
-                    <th>price</th>
-                    <th>taxes</th>
-                    <th>ads</th>
-                    <th>discount</th>
-                    <th>total</th>
-                    <th>category</th>
-                    <th>update</th>
-                    <th>delete</th>
-                </tr>
-                <tbody id="tbody">
+            <div class="table-div">
+                <table id="table">
+                    <tr class="tableHead" >
+                        <th>id</th>
+                        <th>title</th>
+                        <th>price</th>
+                        <th>taxes</th>
+                        <th>ads</th>
+                        <th>discount</th>
+                        <th>total</th>
+                        <th>category</th>
+                        <th>update</th>
+                        <th>delete</th>
+                    </tr>
+                    <tbody id="tbody">
 
-                </tbody>
-            </table>
+                    </tbody>
+                </table>
+            </div>
 
         </div>
 
