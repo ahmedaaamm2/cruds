@@ -104,6 +104,32 @@ function clearData(){
     category.value = '';
 }
 
+
+
+// colors function
+
+// function colorFunc(){
+//     hhh = document.getElementById('table');
+//     for(let s = 0; s < hhh.rows.length; s++){
+//         hhh.rows[s].onmouseover = function(){
+//             if(hhh.rows.value.includes('y')){
+//                 this.style.backgroundColor = 'red'; 
+//                 hhh.rows[s].onmouseleave = function(){
+//                     this.style.backgroundColor = 'green';
+//                 }  
+//             }
+
+//             // console.log('Ahmed')
+
+//         }
+//     }
+      
+
+// }
+
+
+
+
 // read
 
 function showData()
@@ -126,19 +152,21 @@ function showData()
                 <td><button onclick="deleteData(${i})" id="delete">delete</button></td>
             </tr>
         
-        `
+        `   
 
-        // ssss = document.getElementById("table").rows[i].cells[7];
-        if(dataPro[i].category === 'A'){
-            console.log('Ahmed')
-
+            // ssss = table.rows[i].cells[7];
+            // ssss = document.getElementById("table").rows[i].cells[7];
+            
+            // ssss = document.getElementById("myTd");
             // ssss.style.backgroundColor = 'red';
+        // if(dataPro[i].category === 'Yyyy'){
+        //     console.log('Ahmed')
+
+        //     ssss.style.backgroundColor = 'red';
         // hhh = document.getElementsByClassName("ttttt")
         // hhh.style.backgroundColor = 'red';
-        }
-
-
-    }
+        // }
+        // }
 
 
 
@@ -154,8 +182,10 @@ function showData()
     }
 
 }
+}
 
 showData()
+// colorFunc()  
 // count
 // delete
 
@@ -198,8 +228,7 @@ function updateData(i){
 
 
 // search
-<<<<<<< HEAD
-=======
+
 let searchMood = 'title';
 
 function getSearchMood(id)
@@ -221,7 +250,8 @@ showData();
 
 
 function searchData(value)
-{
+{   
+    console.log(value)
     let table = '';
     for(let i = 0; i < dataPro.length; i++){    
         if(searchMood == 'title'){
@@ -252,12 +282,12 @@ function searchData(value)
                     <td>${dataPro[i].ads}</td>
                     <td>${dataPro[i].discount}</td>
                     <td>${dataPro[i].total}</td>
-                    <td id="myTd" class="ww">${dataPro[i].category}</td>
+                    <td >${dataPro[i].category}</td>
                     <td><button onclick= "updateData(${i})" id="update">update</button></td>
                     <td><button onclick="deleteData(${i})" id="delete">delete</button></td>
                 </tr>
                         `;
-            } 
+            }            
         }        
     }
  
@@ -269,8 +299,6 @@ function searchData(value)
 
         
       
-
->>>>>>> a3768fce1a4fc7491a9e7d7505cc4aa7044d4d37
 
 // clean data
 
