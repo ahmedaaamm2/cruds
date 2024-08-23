@@ -129,12 +129,12 @@ function clearData(){
 
 
 
-
 // read
 
 function showData()
 {
-    
+
+    tt = document.getElementById('tbody')
     let table = '';
     for(let i = 0; i < dataPro.length; i++){
         
@@ -147,15 +147,28 @@ function showData()
                 <td>${dataPro[i].ads}</td>
                 <td>${dataPro[i].discount}</td>
                 <td>${dataPro[i].total}</td>
-                <td id="myTd" class="ww">${dataPro[i].category}</td>
+                <td>${dataPro[i].category}</td>
                 <td><button onclick= "updateData(${i})" id="update">update</button></td>
                 <td><button onclick="deleteData(${i})" id="delete">delete</button></td>
             </tr>
         
-        `   
+        `
+        // console.log('Ahmed');
 
+
+        // dataPro[i].classList.add("even");
+
+        
+        // let tabe = document.getElementById("tbody");   
+
+        // let rows = tabe.getElementsByTagName("td"); 
+        // for(let i = 0; i < rows.length; i++){
+        //     rows[i].className = "even";
+    
+        // }
             // ssss = table.rows[i].cells[7];
             // ssss = document.getElementById("table").rows[i].cells[7];
+            
             
             // ssss = document.getElementById("myTd");
             // ssss.style.backgroundColor = 'red';
@@ -170,6 +183,7 @@ function showData()
 
 
 
+        
     document.getElementById('tbody').innerHTML = table;
 
     let btnDelete = document.getElementById('deleteAll');
@@ -183,9 +197,37 @@ function showData()
 
 }
 }
-
+// tst()
 showData()
-// colorFunc()  
+// colorFunc() 
+
+
+// function tst(){
+//     // console.log('Ahmed');
+//     for(let i = 0; i < dataPro.length; i++){    
+//         if(dataPro[i].category (aa)){
+//             console.log('search  by title working ');
+//         console.log('Ahmed');
+            
+//         }
+//     }
+//     console.log('Ahmed');
+// }
+
+// function colorFunc(){
+//     console.log("aaaaaaaaaaaaa")
+//     const rows = document.querySelectorAll("product-row");
+//     for(let h = 0; h < rows.length; h++){
+//         const ww = rows[h].querySelector(".ww").textContent;
+//         if(ww === "Yyyy"){
+//             console.log("aaaaaaaaaaaaa")
+//             rows[h].classList.add("even");
+//         }
+//     }
+
+// }
+
+// colorFunc()
 // count
 // delete
 
@@ -256,6 +298,7 @@ function searchData(value)
     for(let i = 0; i < dataPro.length; i++){    
         if(searchMood == 'title'){
             if(dataPro[i].title.includes(value.toLowerCase())){
+                console.log('search  by title working ');
                 table += `
                 <tr>
                     <td>${i}</td>
@@ -273,6 +316,7 @@ function searchData(value)
             }        
         }else{
             if(dataPro[i].category.includes(value.toLowerCase())){
+                console.log("search by category working")
                 table += `
                 <tr>
                     <td>${i}</td>

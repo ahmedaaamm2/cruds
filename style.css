@@ -150,7 +150,9 @@ td{
     border-radius: 15px;
     /* height: 5px; */
 }
-
+.even{background-color: #cc1515;} 
+.product-row{background-color: #152dcc;}
+.ww{background-color: #cc15b4;}
 
 
 
