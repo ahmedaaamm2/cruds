@@ -139,7 +139,7 @@ function showData()
     for(let i = 0; i < dataPro.length; i++){
         
         table += `
-            <tr>
+            <tr class="rows">
                 <td>${i}</td>
                 <td>${dataPro[i].title}</td>
                 <td>${dataPro[i].price}</td>

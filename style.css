@@ -43,8 +43,8 @@ button, .head, #total,  .tableHead{
     flex-direction: column;
     /* background-color: var(--main-background); */
     width: 80%;
-    padding: 1em .5em;
-    gap: .5em;
+    padding: 0.5em .3em;
+    gap: .3em; 
     margin: auto;
 }  
 input{
@@ -62,10 +62,8 @@ input{
     display: flex;
     flex-direction: column;
     justify-content: center;
-    height: 90px;
+    height: 75px;
     text-align: center;
-    
-    /* margin: 25px 0; */
     border-radius: 15px;
 }
   
@@ -103,13 +101,17 @@ button{
     width: 100%;
     height: 50px;
     border-radius: 7px;
-    padding: 4px 0;
+    /* padding: 4px 0; */
     outline: none;
     border: none;
     /* color: white; */
     margin: 3px 0 0 0;
-
 }
+#update, #delete{
+    height: 40px;
+}
+
+
 button:hover, .btnSearch button:hover, #total:hover{
     /* transform: scale(1.02); */
     background-color: var(--hover-color);
@@ -126,29 +128,21 @@ button:hover, .btnSearch button:hover, #total:hover{
 
 #deleteAll{
     margin: 20px 0;
-    /* background-color: blueviolet; */
-    /* height: 90px; */
 }
 table{
     width: 100%;
-    margin: 10px 0;
     text-align: center;
-    /* table-layout: auto !important; */
-    /* background-color: var(--button-color-1); */
-    /* color: #000000; */
-    /* font: bold; */
 } 
 
 th{
-    /* text-transform: capitalize; */
     border-radius: 15px;
     height: 60px;
 }
 td{
-    padding: 2px;
+    /* padding: 2px; */
     background-color: #adb9a8;
     border-radius: 15px;
-    /* height: 5px; */
+    height: 5px;
 }
 .even{background-color: #cc1515;} 
 .product-row{background-color: #152dcc;}
@@ -167,7 +161,7 @@ td{
 
 
     *{
-        font-size: 15px;  
+        font-size: 12px;  
     }
 
     body {
@@ -186,14 +180,25 @@ td{
         font-size:10px;
     }
     #update, #delete, th{
-        background-color: #069604;
+        background-color: #128610;
         color: white;
     }
     td{
         background-color: white;
+        /* height: 10px; */
+
     }
-<<<<<<< HEAD
+    th{
+        border-radius: 15px;
+        height: 50px;
+    }
+    .rows{
+        height: 20px;
+    }
+    #update, #delete{
+        height: 30px;
+    }
+
 }   
-=======
-}   
->>>>>>> 73d7570c95e4f0f29c4a6051527c04dff7b8f86b
+
+
