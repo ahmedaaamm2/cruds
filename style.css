@@ -135,13 +135,13 @@ table{
 } 
 
 th{
-    border-radius: 15px;
+    /* border-radius: 15px; */
     height: 60px;
 }
 td{
     /* padding: 2px; */
     background-color: #adb9a8;
-    border-radius: 15px;
+    /* border-radius: 15px; */
     height: 5px;
 }
 .even{background-color: #cc1515;} 
@@ -169,9 +169,9 @@ td{
         font-size:10px;
     }
     table{
-        border-spacing: 2px;
+        /* border-spacing: 2px; */
         text-align: center;
-        margin: 2px 0;
+        /* margin: 2px 0; */
     }    
     th, tr, td, #update, #delete{
         font-size:10px;
@@ -186,7 +186,6 @@ td{
         /* height: 10px; */
     }
     th{
-        
         height: 40px;
     }
     .rows{
