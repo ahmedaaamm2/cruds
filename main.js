@@ -36,7 +36,7 @@ function getTotal()
         total.style.background = '#ed1f1f';
     }else{
         total.innerHTML = 'Total ';
-        total.style.background = '#a52a2a';
+        total.style.background = '#d0ab47';
     
     }
 }
