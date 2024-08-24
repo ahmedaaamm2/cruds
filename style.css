@@ -158,8 +158,6 @@ td{
 
 
  @media only screen and (max-width: 600px) {
-
-
     *{
         font-size: 12px;  
     }
@@ -170,29 +168,26 @@ td{
     .table-div{
         font-size:10px;
     }
-
     table{
         border-spacing: 2px;
         text-align: center;
         margin: 2px 0;
     }    
-
     th, tr, td, #update, #delete{
         font-size:10px;
+        /* border-radius: 5px; */
     }
     #update, #delete, th{
         background-color: #128610;
-        color: white;
-        
+        color: white;     
     }
     td{
         background-color: white;
         /* height: 10px; */
     }
     th{
-        border-radius: 15px;
+        
         height: 40px;
-        margin: 2px 0;
     }
     .rows{
         height: 20px;
