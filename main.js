@@ -32,10 +32,10 @@ function getTotal()
 {
     if(price.value != '' && taxes.value != '' && ads.value != ''){
         let result = (+price.value + +taxes.value + +ads.value) - +discount.value;
-        total.innerHTML = 'Total ' + result;
+        total.innerHTML = result;
         total.style.background = '#ed1f1f';
     }else{
-        total.innerHTML = 'Total ';
+        total.innerHTML = '';
         total.style.background = '#d0ab47';
     
     }
@@ -99,7 +99,7 @@ function clearData(){
     taxes.value = '';
     ads.value = '';
     discount.value = '';
-    total.innerHTML = 'Total';
+    total.innerHTML = '';
     count.value = '';
     category.value = '';
 }
