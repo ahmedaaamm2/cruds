@@ -138,8 +138,9 @@ table{
 } 
 
 
-.table-div{
-    background-color: yellow;
+.table-div{ 
+    background-color: #fafad4;
+    border-radius: 2em;
 
     /* align-items: center; */ 
     /* width: 50em; */
@@ -165,7 +166,7 @@ th{
 }
 td{
     padding: 2px;
-    background-color: #40a113;
+    background-color: #c0c9bb;
     border-radius: 15px;
     border-spacing: 30px;
     color: rgb(255, 255, 255);

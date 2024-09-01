@@ -114,32 +114,20 @@ function showData()
         
         table += `
             <tr>
-                <td>${i}</td>
-                <td>${dataPro[i].title}</td>
-                <td>${dataPro[i].price}</td>
-                <td>${dataPro[i].taxes}</td>
-                <td>${dataPro[i].ads}</td>
-                <td>${dataPro[i].discount}</td>
-                <td>${dataPro[i].total}</td>
-                <td id="myTd" class="ww">${dataPro[i].category}</td>
-                <td><button onclick= "updateData(${i})" id="update">update</button></td>
-                <td><button onclick="deleteData(${i})" id="delete">delete</button></td>
+                <td class='colorText'>${i}</td>
+                <td class='colorText'>${dataPro[i].title}</td>
+                <td class='colorText'>${dataPro[i].price}</td>
+                <td class='colorText'>${dataPro[i].taxes}</td>
+                <td class='colorText'>${dataPro[i].ads}</td>
+                <td class='colorText'>${dataPro[i].discount}</td>
+                <td class='colorText'>${dataPro[i].total}</td>
+                <td class='colorText'>${dataPro[i].category}</td>
+                <td class='colorText'><button onclick= "updateData(${i})" id="update">update</button></td>
+                <td class='colorText'><button onclick="deleteData(${i})" id="delete">delete</button></td>
             </tr>
         
         `
-
-        // ssss = document.getElementById("table").rows[i].cells[7];
-        if(dataPro[i].category === 'A'){
-            console.log('Ahmed')
-
-            // ssss.style.backgroundColor = 'red';
-        // hhh = document.getElementsByClassName("ttttt")
-        // hhh.style.backgroundColor = 'red';
-        }
-
-
     }
-
 
 
     document.getElementById('tbody').innerHTML = table;
@@ -152,10 +140,58 @@ function showData()
     }else{
         btnDelete.innerHTML = '';
     }
+    changeValue()
 
 }
 
 showData()
+btnClick() 
+changeValue()
+
+
+
+function changeValue() {
+
+    let els = document.getElementsByClassName('colorText');
+    for (let i = 0; i < els.length; i++) {
+    let cell = els[i];
+    if (cell.textContent === "A") {
+        cell.style.backgroundColor = 'purple';
+        // cell.style.color = 'red';
+        console.log('boom');
+        
+    }if (cell.textContent === "a"){
+        cell.style.backgroundColor = 'green';
+        cell.style.color = 'black';
+    }if (cell.textContent === "b"){
+        cell.style.backgroundColor = 'blue';
+        cell.style.color = 'white';
+    }if (cell.textContent === "c"){
+        cell.style.backgroundColor = 'red';
+        cell.style.color = 'black';
+    }   
+
+    }
+    
+// var els = document.getElementsByClassName('colorText');
+// for (var i = 0; i < els.length; i++) {
+//   var cell = els[i];
+//   if (cell.textContent === "A") {
+//     cell.classList.remove('red');
+//   } if (cell.textContent === "rrr") {
+//     console.log('boom');
+//     cell.classList.remove('green');
+//   } 
+// }
+}
+
+
+function btnClick() {
+    for(let i = 0; i < dataPro.length; i++){
+        var x = document.getElementById("table").getElementsByTagName("td");
+        
+    }              
+    }
 // count
 // delete
 
@@ -163,6 +199,7 @@ function deleteData(i){
     dataPro.splice(i,1);
     localStorage.product = JSON.stringify(dataPro)
     showData()
+    
 }
 
 // delet all
@@ -271,3 +308,36 @@ function searchData(value)
 
 // clean data
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+// for(let i = 0; i < dataPro.length; i++){
+//     if(dataPro[i].category.includes('A')){
+//         console.log('has a');
+        // var x = document.getElementById("table");
+        // var x = document.getElementById("table").getElementsByTagName("td");
+        
+    //     x.style.backgroundColor = 'red';
+
+    // }else{
+    //     console.log('no');
+    // }
+    // console.log(i);
+    // i.style.backgroundColor =  'red';
+    // ssss = document.getElementById("table");
+    // ssss.rows[0].cells[9].style.backgroundColor = 'red';
+// }
