@@ -121,11 +121,10 @@ function showData()
                 <td class='colorText'>${dataPro[i].ads}</td>
                 <td class='colorText'>${dataPro[i].discount}</td>
                 <td class='colorText'>${dataPro[i].total}</td>
-                <td class='colorText'>${dataPro[i].category}</td>
+                <td id='qqq' class='colorText'>${dataPro[i].category}</td>
                 <td class='colorText'><button onclick= "updateData(${i})" id="update">update</button></td>
                 <td class='colorText'><button onclick="deleteData(${i})" id="delete">delete</button></td>
             </tr>
-        
         `
     }
 
@@ -163,12 +162,17 @@ function changeValue() {
     }if (cell.textContent === "a"){
         cell.style.backgroundColor = 'green';
         cell.style.color = 'black';
+        cell.style.borderRadius = "5px";
+        cell.style.margin = "20px";
+        cell.style.height = ".05px .05px"; 
     }if (cell.textContent === "b"){
         cell.style.backgroundColor = 'blue';
         cell.style.color = 'white';
+        cell.style.borderRadius = "25px";
     }if (cell.textContent === "c"){
         cell.style.backgroundColor = 'red';
         cell.style.color = 'black';
+        cell.style.borderRadius = "25px";
     }   
 
     }
